@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javaScript Form Validation </title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin: 50px auto;
+    }
+    form{
+      width: 650px;
+      /* background: rgba(255, 255, 255, 0.5); */
+      background:linear-gradient(140deg, rgb(112, 103, 103), #ddd0d0);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    label{
+      font-size: 20px;
+      font-weight: 500;
+      color: #0c0c0c;
+    }
+    input{
+      padding: 8px 15px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      border-radius: 0.5rem;
+    }
+    #btn{
+      background: green;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 0 50px;
+    }
+    span{
+      color: red;
+    }
+    .correct{
+      color: green;
+      padding-bottom: -10px;
+
+    }
+  </style>
+</head>
+<body>
+  <form action="#" onsubmit="return validation()" autocomplete="off" >
+    <tr>
+      <td>
+        <label>Username :</label>
+        <input type="text" id="user" placeholder="Enter Username">
+        <span class="correct"></span>
+        <span id="users"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Password :</label>
+        <input type="text" id="pass" placeholder="Password">
+        <span class="correct"></span>
+        <span id="passs"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Confirm Password :</label>
+        <input type="text" id="confpass" placeholder="Confirm Password">
+        <span id="confpasss"></span>
+        <span class="correct"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Email :</label>
+        <input type="text" id="email" placeholder="Enter Email">
+         <span id="emails"></span>
+         <span class="correct"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Mobile :</label>
+        <input type="text" id="mob" placeholder="Mobile (Do not write +91)">
+        <span id="mobs"></span>
+        <span class="correct"></span>
+      </td>
+    </tr>
+    <input type="submit" id="btn">
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
